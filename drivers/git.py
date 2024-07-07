@@ -19,7 +19,6 @@ class GitDriver:
         self.raw_diff = ""
 
         git_status = self.repo.git.status()
-        print(git_status)
 
         if "Changes not staged for commit" in git_status:
             self.raw_diff += self.repo.git.diff()
